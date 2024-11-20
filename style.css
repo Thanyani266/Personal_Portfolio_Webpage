@@ -39,6 +39,12 @@ a {
     }
 }
 
+#navbar.scrolled {
+    background-color: #333; 
+    color: black;
+    box-shadow: 0px 4px 7px #777;
+}
+
 .navbar .logo {
     font-size: 30px;
     font-weight: 700;
@@ -63,6 +69,46 @@ a {
 .navbar ul li.active a {
     color: #7cf03d;
 }
+
+/* Responsive Navbar */
+.menu-icon {
+    font-size: 40px;
+    display: none;
+}
+
+@media (max-width: 775px) {
+    .menu-icon {
+        display: block;
+        color: #fff;
+    }
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #fff;
+        opacity: .7;
+        width: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .navbar ul li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar ul li a {
+        color: #1f242d;
+    }
+}
+.navbar ul {
+    display: flex;
+}
+/* End Responsive Navbar */
 
 .home {
     display: flex;

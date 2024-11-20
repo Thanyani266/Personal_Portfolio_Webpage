@@ -9,15 +9,18 @@
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <a href="#" class="logo">Portfolio</a>
-        <ul>
+        <ul id="menuItems">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
+        <div class="menu-icon" onclick="menuToggle()">
+            <i class='bx bx-menu'></i>
+        </div>
     </nav>
     <!-- End Navbar Section -->
 
@@ -46,10 +49,12 @@
             <div class="btn-sci">
                 <a href="#" class="btn">Download CV</a>
                 <div class="sci">
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin' ></i></a>
-                    <a href="#"><i class='bx bxl-twitter' ></i></a>
-                    <a href="#"><i class='bx bxl-youtube' ></i></a>
+                    <p>Tech Skills:</p>
+                    <a href="#"><i class='bx bxs-file-js' ></i></a>
+                    <a href="#"><i class='bx bxl-react' ></i></a>
+                    <a href="#"><i class='bx bxl-nodejs' ></i></a>
+                    <a href="#"><i class='bx bxl-vuejs'></i></a>
+                    <a href="#"><i class='bx bxl-python'></i></a>
                 </div>
             </div>
         </div>
@@ -239,5 +244,34 @@
         </div>
      </footer>
     <!-- End Footer -->
+
+    <!-- JavaScript  -->
+    <script>
+        const menuItems = document.getElementById('menuItems');
+        const menuIcon = document.getElementsByClassName('menu-icon')[0];
+
+        menuItems.style.maxHeight == '0px';
+
+        function menuToggle(){
+            if(menuItems.style.maxHeight == '0px'){
+                menuItems.style.maxHeight = '200px';
+                menuItems.style.display = '';
+            }else{
+                menuItems.style.maxHeight = '0px';
+                menuItems.style.display = '';
+            }
+        }
+
+        const navbar = document.querySelector('#navbar');
+
+        window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { // Adjust this value based on when you want the color to change
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+});
+    </script>
+    <!-- End JavaScript -->
 </body>
 </html>
