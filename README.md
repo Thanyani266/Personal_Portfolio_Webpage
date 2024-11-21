@@ -14,4 +14,7 @@ Helping the reader to understand what I am passionate about and the things that 
 ###### 3. Portfolio
 The projects that have been done in the past.
 ###### 4. Services
-6. Contact
+The list of services that I offer
+###### 5. Contact
+Letting the reader know how and where they can get in touch.
+Also added GitHub profile, LinkedIn, Youtube and so on.
