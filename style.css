@@ -118,6 +118,7 @@ a {
     padding: 60px 9% 0;
     color: #fff;
     visibility: hidden;
+    background: #485563;
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.6s;
@@ -125,6 +126,7 @@ a {
 
 .home-info h1 {
     font-size: 55px;
+    margin-bottom: 10px;
 }
 
 .home-info h2 {
@@ -175,7 +177,7 @@ a {
 }
 
 .home-info .btn-sci {
-    display: flex;
+    display: block;
     align-items: center;
 }
 
@@ -199,7 +201,7 @@ a {
 }
 
 .home-info .btn-sci .sci {
-    margin-left: 20px;
+    margin-top: 50px;
 }
 
 .home-info .btn-sci .sci a {
@@ -272,6 +274,68 @@ a {
     object-fit: cover;
     mix-blend-mode: lighten;
 }
+
+/* hero section responsive */
+@media (max-width: 900px) {
+
+    .home {
+        display: block;
+        background: url(./demonic_face.png);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;
+    }
+
+    .home-img {
+        display: none;
+    }
+
+    .home-info {
+        margin-top: 150px;
+    }
+
+    .home-info h1 {
+        font-size: 45px;
+        margin-bottom: 5px;
+    }
+
+    .home-info h2 {
+        font-size: 26px;
+        margin-top: -5px;
+    }
+
+    .home-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .home-info {
+        margin-top: 100px;
+    }
+    .home-info h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+        margin-top: -5px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-top: 50px;
+    }
+    
+    .home-info .btn-sci .sci a {
+        font-size: 15px;
+    }
+}
+/* End hero section responsive */
 
 .bars-animation {
     position: absolute;
