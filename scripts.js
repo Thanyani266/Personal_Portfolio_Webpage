@@ -146,12 +146,9 @@ function displayUserMessage(message) {
   let userMessage = document.createElement("div");
   userMessage.classList.add("message");
   userMessage.classList.add("user");
-  let userAvatar = document.createElement("div");
-  userAvatar.classList.add("avatar");
   let userText = document.createElement("div");
   userText.classList.add("text");
   userText.innerHTML = message;
-  userMessage.appendChild(userAvatar);
   userMessage.appendChild(userText);
   chat.appendChild(userMessage);
   chat.scrollTop = chat.scrollHeight;
@@ -164,7 +161,7 @@ function displayBotMessage(message) {
   botMessage.classList.add("message");
   botMessage.classList.add("bot");
   let botAvatar = document.createElement("div");
-  botAvatar.classList.add("avatar");
+  botAvatar.innerHTML = `<i class='bx bxs-bot'></i>`;
   let botText = document.createElement("div");
   botText.classList.add("text");
   botText.innerHTML = message;
