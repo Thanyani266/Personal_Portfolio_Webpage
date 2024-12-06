@@ -26,7 +26,7 @@ body{
     color: var(--white-color);
 }
 
-header{
+.top-header{
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +41,7 @@ header{
     opacity: 0;
 }
 
-header.active{
+.top-header.active{
     animation: show-header 1.5s linear forwards;
     animation-delay: 1.2s;
 }
@@ -53,7 +53,7 @@ header.active{
     }
 }
 
-header .logo{
+.top-header .logo{
     font-size: 3rem;
     color: var(--white-color);
     font-weight: 700;
@@ -757,6 +757,17 @@ section.active{
 .contact-box .btn{
     margin-top: 2rem;
     cursor: pointer;
+}
+
+.contact footer{
+    background: var(--white-color);
+    color: var(--second-bg-color);
+    text-align: center;
+    font-size: 1.2rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20%;
+    margin-top: 2%;
 }
 
 /* breakpoints */
