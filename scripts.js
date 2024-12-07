@@ -124,14 +124,34 @@ arrowLeft.addEventListener('click', () => {
 function chatbot(input) {
   let output = "";
   input = input.toLowerCase();
-  if (input.includes("hello") || input.includes("hi")) {
-    output = "Hello, nice to meet you!";
+  if (input.includes("hello") || input.includes("hi") || input.includes("hey")) {
+    output = "Hello, nice to meet you. How can I assist you today?";
   } else if (input.includes("how are you")) {
-    output = "I'm doing fine, thank you for asking.";
-  } else if (input.includes("what is your name")) {
-    output = "My name is Jarvis, I'm a chatbot.";
+    output = "I'm doing fine, thank you for asking. How can I assist you today?";
+  } else if (input.includes("what is your name") || input.includes("name") || input.includes("who are you")) {
+    output = "My name is Carlos, I'm a chatbot.";
   } else if (input.includes("what can you do")) {
-    output = "I can chat with you and answer some simple questions.";
+    output = "I can chat with you and answer some questions about Thanyani Gumani's portfolio.";
+  } else if (input.includes("help")) {
+    output = "Sure, I am here to help. What do you need assistance with?";
+  } else if (input.includes("services")) {
+    output = "I offer a variety of services including web development, data analytics, data science, and DevOps consulting";
+  } else if (input.includes("projects") || input.includes("work")) {
+    output = "You can view my projects by visiting the portfolio section on this page (navbar)";
+  } else if (input.includes("skills")) {
+    output = "Thanyani has skills in HTML, CSS, JavaScript, Python, Machine Learning, MySQL, React.js, and Node.js";
+  } else if (input.includes("contact")) {
+    output = "You can contact Thanyani by phone at +27 81 703 9324, by email at Thanyani.Gumani@capaciti.org.za";
+  } else if (input.includes("experience") || input.includes("work experience")) {
+    output = "Thanyani has over 4 years of experience in Data Science and DevOps Engineering.";
+  } else if (input.includes("education") || input.includes("qualification") || input.includes("qualifications")) {
+    output = "Thanyani completed MSc Applied Mathematics(Data Science), Web Development Bootcamp and A certificate in Software Engineering.";
+  } else if (input.includes("resume") || input.includes("cv") || input.includes("curriculum vitae")) {
+    output = "You can download my resume/CV from the link provided on the homepage.";
+  } else if (input.includes("programming languages")) {
+    output = "Thanyani is proficient in HTML, CSS, JavaScript, MySql, Matlab, and Python.";
+  } else if (input.includes("where are you based") || input.includes("location") || input.includes("where are you located") || input.includes("where are you situated") || input.includes("where do you stay")) {
+    output = "I am based in Johannesburg, South Africa.";
   } else if (input.includes("tell me a joke")) {
     output = "Why did the chicken go to the seance? To get to the other side.";
   } else {

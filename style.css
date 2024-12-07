@@ -838,7 +838,7 @@ section.active{
 }
 
 .chatbot-container .user .text {
-  background: #4a4d52;
+  background: var(--second-bg-color);
   color: var(--main-color);
   border-radius: 10px 10px 0 10px;
 }
