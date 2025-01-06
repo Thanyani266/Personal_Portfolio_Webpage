@@ -777,8 +777,9 @@ section.active{
     margin: 6% auto;
     padding: 20px;
     border-radius: 10px;
+    border: 2px solid var(--white-color);
     box-shadow: #64646f33 0px 7px 29px 0px;
-    background: #31363F;
+    background: var(--second-bg-color);
     display: none;
 }
 
@@ -927,6 +928,11 @@ section.active{
 }
 
 /* breakpoints */
+@media screen and (max-width: 1285px) {
+    .chatbot-container {
+        margin-top: 7%;
+    }
+}
 @media screen and (max-width: 1200px) {
     html{
         font-size: 55%;
@@ -941,11 +947,19 @@ section.active{
     section{
         padding: 10rem 4% 2rem;
     }
+
+    .chatbot-container {
+        margin-top: 10%;
+    }
 }
 
 @media screen and (max-width: 810px) {
     .contact-box .field-box{
         grid-template-columns: 1fr;
+    }
+
+    .chatbot-container {
+        margin-top: 12%;
     }
 }
 
@@ -1004,6 +1018,10 @@ section.active{
     .contact-box .field-box{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .chatbot-container {
+        margin-top: 14%;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -1014,6 +1032,15 @@ section.active{
 
     .contact-box .field-box{
         grid-template-columns: 1fr;
+    }
+
+    .chatbot-container {
+        position: relative;
+        width: 100%;
+        float: none;
+        margin: 70px auto auto auto;
+        padding: 20px;
+        border-radius: 10px;
     }
 }
 

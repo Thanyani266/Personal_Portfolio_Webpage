@@ -1,9 +1,11 @@
+// variables
 const navLinks = document.querySelectorAll('header nav a');
 const logoLink = document.querySelector('.logo');
 const sections = document.querySelectorAll('section');
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('header nav');
 
+// toggle the menu icon
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
@@ -35,6 +37,7 @@ const activePage = () => {
     navbar.classList.remove('active');
 }
 
+// active navigation links
 navLinks.forEach((link, idx) => {
     link.addEventListener('click', () => {
         if(!link.classList.contains('active')){
@@ -49,6 +52,7 @@ navLinks.forEach((link, idx) => {
     });
 });
 
+// logo as a nav link
 logoLink.addEventListener('click', () => {
     if(!navLinks[0].classList.contains('active')){
         activePage();
@@ -60,8 +64,10 @@ logoLink.addEventListener('click', () => {
         }, 1100);
     }
 });
+
 const resumeBtns = document.querySelectorAll('.resume-btn');
 
+// buttons on the resume section
 resumeBtns.forEach((btn, idx) => {
     btn.addEventListener('click', () => {
 
@@ -79,6 +85,7 @@ resumeBtns.forEach((btn, idx) => {
     });
 });
 
+// variables for the arrows
 const arrowRight = document.querySelector('.portfolio-box .navigation .arrow-right');
 const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left');
 
@@ -216,11 +223,20 @@ document.getElementById("input").addEventListener("keypress", function(event) {
 
 
 // -------------------------------------------------------------------------------- //
+
+// chatbot variables
 const chatIcon = document.querySelector(".chatbot-toggler"); 
 const chatbotContainer = document.querySelector(".chatbot-container"); 
 
-
+// toggle the buttons to show and close the chatbot
 chatIcon.addEventListener('click', () => {
   chatIcon.children[0].classList.toggle('bx-x');
   chatbotContainer.classList.toggle('active');
 })
+
+// remove chatbot if the user click outside the chatbot element
+window.addEventListener('click', (e) => {
+  if(e.target != chatbotContainer && e.target.parentNode != chatbotContainer && e.target != chatIcon && e.target.parentNode != chatIcon){
+      chatbotContainer.classList.remove('active');
+  }
+});  
